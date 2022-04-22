@@ -1,6 +1,10 @@
 data "aws_caller_identity" "current" {}
 
 provider "aws" {
+  region = var.region
+}
+
+provider "aws" {
   alias  = "us-east-1"
   region = var.region
   assume_role {
