@@ -1,9 +1,9 @@
 const AWS = require('aws-sdk');
-const ddb = AWS.DynamoDB.DocumentClient();
+const ddb = new AWS.DynamoDB.DocumentClient();
 
 const TABLENAME = 'basic-table';
 
-exoprts.handler = async (event, context, callback) => {
+exports.handler = async (event, context, callback) => {
   console.log('Received event: ', JSON.stringify(event, null, 2));
 
   let body = JSON.parse(event.body);
